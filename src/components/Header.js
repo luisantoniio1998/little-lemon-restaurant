@@ -1,8 +1,11 @@
 import React from 'react'
+import logo from '../assets/logo.svg'
 
 function Header() {
   return (
-    <header>Header</header>
+    <header>
+        <img src={logo} />
+    </header>
   )
 }
 
