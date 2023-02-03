@@ -5,13 +5,13 @@ import Nav from './components/Nav';
 
 function App() {
   return (
-    <>
+  <div class="container">
       <Header />
       <Nav />
-      <Main />
-      <Footer />
-    </>
-  );
+    <Main />
+    <Footer />
+  </div>
+  )
 }
 
 export default App;
