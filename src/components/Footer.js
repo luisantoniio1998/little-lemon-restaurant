@@ -1,33 +1,44 @@
 import React from 'react'
+import logo from '../assets/logo-square.png'
 
 function Footer() {
   return (
-    <footer>
-        <>
-            <ul>
+
+    <div className='footer-bg'>
+      <div className='container'>
+        <footer>
+          <div className='footer-grid'>
+            <div className='footer-col'>
+              <img src={logo} />
+            </div>
+            <div className='footer-col'>
+              <ul>
                 <li><a href='#home'>Home</a></li>
                 <li><a href='#home'>About</a></li>
                 <li><a href='#home'>Menu</a></li>
                 <li><a href='#home'>Reservations</a></li>
                 <li><a href='#home'>Order Online</a></li>
                 <li><a href='#home'>Login</a></li>
-            </ul>
-        </>
-        <>
+              </ul>
+            </div>
+            <div className='footer-col'>
             <ul>
-                <li><a href='#home'>Adress</a></li>
-                <li><a href='#home'>Phone number</a></li>
-                <li><a href='#home'>Email</a></li>
-            </ul>
-        </>
-        <>
+                <li><a href='#home'>Home</a></li>
+                <li><a href='#home'>About</a></li>
+                <li><a href='#home'>Menu</a></li>
+              </ul>
+            </div>
+            <div className='footer-col'>
             <ul>
-                <li><a href='#home'>Social Links</a></li>
+                <li>Adress</li>
                 <li><a href='#home'>Instagram</a></li>
-            </ul>
-        </>
-
-    </footer>
+                <li>+351 222 222 222</li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
   )
 }
 
