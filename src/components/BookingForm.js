@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { submitAPI } from "../API";
 
 function BookingForm({ dispatch, state }) {
   const [reservationDate, setReservationDate] = useState("");
@@ -6,12 +8,21 @@ function BookingForm({ dispatch, state }) {
   const [numberOfGuests, setNumberOfGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(reservationDate);
-    console.log(reservationTime);
-    console.log(numberOfGuests);
-    console.log(occasion);
+    const reservation = {
+      res_date: reservationDate,
+      res_time: reservationTime,
+      res_guests: numberOfGuests,
+      res_occasion: occasion,
+    };
+    console.log(reservation);
+    const submitResponse = submitAPI(reservation);
+    if (submitResponse === true) {
+      navigate("/booking/confirmed");
+    }
   };
 
   function handleDateChange(e) {

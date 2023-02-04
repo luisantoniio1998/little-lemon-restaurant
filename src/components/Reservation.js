@@ -29,11 +29,6 @@ export function initializeTimes() {
 function Reservation() {
   const [state, dispatch] = useReducer(reducer, initializeTimes());
 
-  useEffect(() => {
-    const output = fetchAPI(new Date());
-    console.log("im here" + output);
-  }, []);
-
   return (
     <div className="container">
       <div className="reservation">
