@@ -38,6 +38,7 @@ function BookingForm({ dispatch, state }) {
         id="res-date"
         value={reservationDate}
         onChange={handleDateChange}
+        required
       />
       <label htmlFor="res-time">Choose time</label>
       <select
