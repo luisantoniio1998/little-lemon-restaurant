@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 
 function Nav() {
@@ -7,26 +8,32 @@ function Nav() {
       <div class="container">
         <Header />
         <nav>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Menu</a>
-            </li>
-            <li>
-              <a href="#">Reservations</a>
-            </li>
-            <li>
-              <a href="#">Order Online</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
+          <Link to="/" className="nav-item">
+            Home
+          </Link>
+          <Link to="/booking" className="nav-item">
+            Reservation
+          </Link>
+          <Link
+            to="#"
+            onClick={() => {
+              const aboutElement = document.querySelector("#testimonials");
+              aboutElement.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="nav-item"
+          >
+            Testimonials
+          </Link>
+          <Link
+            to="#"
+            onClick={() => {
+              const aboutElement = document.querySelector("#about");
+              aboutElement.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="nav-item"
+          >
+            About
+          </Link>
         </nav>
       </div>
     </div>

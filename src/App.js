@@ -1,24 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
-import CallToAction from "./components/CallToAction";
+
 import Nav from "./components/Nav";
-import Specials from "./components/Specials";
-import Chicago from "./components/Chicago";
-import Reservation from "./components/Reservation";
-import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
+import Homepage from "./components/Homepage";
+import Booking from "./components/Booking";
 
 function App() {
   return (
     <>
       <Nav />
       <Routes>
-        <Route path="/" element={<CallToAction />} />
-        <Route path="/droga" element={<CallToAction />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/booking" element={<Booking />} />
       </Routes>
-      <Reservation />
-      <Specials />
-      <Testimonials />
-      <Chicago />
       <Footer />
     </>
   );

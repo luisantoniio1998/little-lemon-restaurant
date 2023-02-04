@@ -3,7 +3,7 @@ import image from "../assets/map.png";
 
 function Chicago() {
   return (
-    <div className="container">
+    <div id="about" className="container">
       <div className="chicago">
         <div className="chicago-grid">
           <div className="chicago-left">

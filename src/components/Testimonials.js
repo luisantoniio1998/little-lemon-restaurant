@@ -3,7 +3,7 @@ import person from "../assets/person1.jpeg";
 
 function Testimonials() {
   return (
-    <div className="testimonials-bg">
+    <div id="testimonials" className="testimonials-bg">
       <div className="container">
         <div className="testimonials">
           <h2>Testimonials</h2>
