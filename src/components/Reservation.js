@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useEffect, useReducer } from "react";
 import image from "../assets/restauranfood.jpg";
 import BookingForm from "./BookingForm";
+import { fetchAPI } from "../API";
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "update_times":
+      return {
+        ...state,
+        availableTimes: updateTimes(action.selectedDate),
+      };
+    default:
+      return state;
+  }
+};
+
+export function updateTimes(selectedDate) {
+  const date = new Date(selectedDate);
+  return fetchAPI(date);
+}
+
+export function initializeTimes() {
+  return {
+    availableTimes: fetchAPI(new Date()),
+  };
+}
 
 function Reservation() {
+  const [state, dispatch] = useReducer(reducer, initializeTimes());
+
+  useEffect(() => {
+    const output = fetchAPI(new Date());
+    console.log("im here" + output);
+  }, []);
+
   return (
     <div className="container">
       <div className="reservation">
@@ -11,7 +42,7 @@ function Reservation() {
             <h1>Reserve a table</h1>
             <h4>Reserve your table at Little Lemon Today!</h4>
             <div className="reservation-card">
-              <BookingForm />
+              <BookingForm dispatch={dispatch} state={state} />
             </div>
           </div>
           <div className="reservation-right">
