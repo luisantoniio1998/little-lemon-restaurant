@@ -1,4 +1,5 @@
 import React from "react";
+import image from "../assets/restauranfood.jpg";
 
 function Reservation() {
   return (
@@ -31,7 +32,16 @@ function Reservation() {
               </form>
             </div>
           </div>
-          <div>a</div>
+          <div className="reservation-right">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in
+              purus vitae neque commodo pulvinar. Nunc venenatis quis lorem ac
+              varius. Curabitur justo est, pretium eget metus at, auctor rhoncus
+              elit. Donec eget massa sem. Pellentesque pellentesque enim et
+              neque scelerisque, eget scelerisque quam vulputate. Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
         </div>
       </div>
     </div>
