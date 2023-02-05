@@ -30,6 +30,17 @@ function BookingForm({ dispatch, state }) {
     dispatch({ type: "update_times", selectedDate: e.target.value });
   }
 
+  {
+    /* Validation for guests*/
+  }
+  const [guestsError, setGuestsError] = useState(false);
+
+  const handleGuestsChange = (e) => {
+    const value = e.target.value;
+    setGuestsError(value > 10 || value < 1);
+    setNumberOfGuests(value);
+  };
+
   return (
     <form className="booking-form" onSubmit={handleSubmit}>
       <label htmlFor="res-date">Choose date</label>
@@ -38,18 +49,20 @@ function BookingForm({ dispatch, state }) {
         id="res-date"
         value={reservationDate}
         onChange={handleDateChange}
+        aria-label="Enter date mm/dd/yyyy"
         required
       />
       <label htmlFor="res-time">Choose time</label>
       <select
-        id="res-time "
+        id="res-time"
         value={reservationTime}
         onChange={(e) => {
           setReservationTime(e.target.value);
         }}
+        aria-label="Select time HH:MM"
       >
         {state?.availableTimes?.map((time) => (
-          <option key={time} value={time}>
+          <option key={time} value={time} aria-label={time}>
             {time}
           </option>
         ))}
@@ -62,9 +75,9 @@ function BookingForm({ dispatch, state }) {
         max="10"
         id="guests"
         value={numberOfGuests}
-        onChange={(e) => {
-          setNumberOfGuests(e.target.value);
-        }}
+        onChange={handleGuestsChange}
+        className={guestsError ? "input-error" : ""}
+        aria-label="Enter number of guests"
       />
       <label htmlFor="occasion">Occasion</label>
       <select
@@ -73,13 +86,17 @@ function BookingForm({ dispatch, state }) {
         onChange={(e) => {
           setOccasion(e.target.value);
         }}
+        aria-label="Select an Occasion"
       >
-        <option>Birthday</option>
-        <option>Anniversary</option>
+        <option aria-label="Birthday">Birthday</option>
+        <option aria-label="Anniversary">Anniversary</option>
       </select>
-      <input type="submit" value="Make Your reservation" />
-
-      <p>Hello! You are {state?.age}.</p>
+      <input
+        type="submit"
+        value="Make Your reservation"
+        disabled={!reservationDate}
+        aria-label="Submit your reservation"
+      />
     </form>
   );
 }

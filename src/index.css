@@ -1,550 +1,447 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+nav {
+    grid-row: 1;
+    align-self: center;
+}
+
+header,
+header>img,
+nav {
+    align-self: center;
+}
+
+#image1,
+.main-right-content img {
+    object-fit: cover;
+    width: 30vw;
+    height: 350px;
+}
+
+.chicago p,
+main p {
+    font-size: 18px;
+}
+
+.chicago p,
+footer,
+main p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer li,
+main h2,
+main p {
+    color: #fff;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: (100px,auto);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: (100px, auto);
+}
+
+.chicago-grid,
+.main-content {
+    grid-template-columns: 1fr 1fr;
 }
 
 h1 {
-  font-size: 40px;
+    font-size: 40px;
 }
 
-h2 {
-  font-weight: normal;
+h2,
+h4 {
+    font-weight: 400;
 }
-
-/*
-  Navbar
-*/
 
 header {
-  display: grid;
-  grid-column: 3 / span 2;
-  grid-row: 1;
-  align-self: center;
-  height: 70px;
+    display: grid;
+    grid-column: 3 / span 2;
+    height: 70px;
 }
 
-header > img {
-  display: grid;
-  align-self: center;
+header>img {
+    display: grid;
 }
 
 .navbar {
-  background-color: white;
-  height: 70px;
+    background-color: #fff;
+    height: 70px;
 }
 
 nav {
-  grid-column: 5 / span 6;
-  grid-row: 1;
-  align-self: center;
+    grid-column: 5 / span 6;
+}
+
+.chicago,
+.reservation,
+.specials,
+.testimonials,
+footer,
+main {
+    grid-column: 3/11;
+    grid-row: 2;
 }
 
 .nav-item {
-  justify-content: space-evenly;
-  padding: 1em;
-  text-decoration: none;
-  color: black;
+    justify-content: space-evenly;
+    padding: 1em;
+    text-decoration: none;
+    color: #000;
 }
 
-/*
-  CallToAction
-*/
-
+.footer-bg,
 .main-bg {
-  background-color: #495e57;
+    background-color: #495e57;
 }
 
+.chicago,
+.reservation,
 main {
-  grid-column: 3 / 11;
-  grid-row: 2;
-  border: 1px solid red;
+    border: 1px solid red;
 }
 
 .main-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 3px solid green;
+    display: grid;
+    border: 3px solid green;
 }
 
 main h1 {
-  color: #F4CE14;
-}
-
-main h2 {
-  color: white;
-}
-
-main p {
-  color: white;
-  font-size: 18px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+    color: #f4ce14;
 }
 
 .main-left-content {
-  padding: 2.5rem 0 2.5rem 0;
-  border: 2px solid blue;
+    padding: 2.5rem 0;
+    border: 2px solid #00f;
 }
 
 .main-right-content {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .main-right-content img {
-  object-fit: cover;
-  border-radius: 16px;
-  width: 30vw;
-  height: 350px;
-  background-color: #F4CE14;
-  position: relative;
-  top: 20px;
+    border-radius: 16px;
+    background-color: #f4ce14;
+    position: relative;
+    top: 20px;
 }
-
 
 button {
-  background-color: #F4CE14;
-  color: black;
-  border-radius: 10px;
-  padding: 1rem 2rem 1rem 2rem;
-  border: none;
+    background-color: #f4ce14;
+    color: #000;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    border: none;
 }
 
-/*
-  Chicago
-*/
-
-.chicago {
-  grid-column: 3 / 11;
-  grid-row: 2;
-  border: 1px solid red;
-}
-
-.chicago-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 2px solid green;
-  margin-bottom: 20px;
+.chicago-grid {
+    display: grid;
+    border: 2px solid green;
+    margin-bottom: 20px;
 }
 
 .chicago-left {
-  padding: 2.5rem 0 2.5rem 0;
+    padding: 2.5rem 0;
 }
 
 .chicago-right {
-  border: 2px solid red;
-  display: flex;
-  justify-content: center;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
 }
 
 #image1 {
-  object-fit: cover;
-  border-radius: 16px;
-  width: 30vw;
-  height: 350px;
-}
-.chicago p {
-  color: black;
-  font-size: 18px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+    border-radius: 16px;
 }
 
-/*
-  Footer
-*/
-.footer-bg {
-  background-color: #495e57;
+.chicago p {
+    color: #000;
 }
 
 footer {
-  grid-column: 3 / 11;
-  grid-row: 2;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border: 2px solid orange
+    border: 2px solid orange;
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 2px solid green
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 2px solid green;
 }
 
 footer img {
-  width: 70px;
+    width: 70px;
 }
 
 .footer-col {
-  border: 1px solid red;
+    border: 1px solid red;
 }
 
 footer ul a {
-  color: white;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 footer li {
-  color: white;
-  list-style: none;;
+    list-style: none;
 }
 
-/*
-  Specials
-*/
-
 .specials h1 {
-  color: black;
-  padding: 2.5rem 0 2.5rem 0;
+    color: #000;
+    padding: 2.5rem 0;
 }
 
 .specials-bg {
-  background-color: white;
+    background-color: #fff;
+}
+
+.card,
+.reservation-card {
+    background-color: #edefee;
 }
 
 .specials {
-  grid-column: 3 / 11;
-  grid-row: 2;
-  padding-bottom: 3rem;
+    padding-bottom: 3rem;
 }
 
 .specials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border: 2px solid green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid green;
 }
 
-/*
-  Card
-*/
-.card {
-  background-color: #EDEFEE;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  width: 250px;
+.card,
+.card img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    width: 250px;
 }
 
 .card-content {
-  padding: 1rem;
-}
-
-.card img {
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  width: 250px;
+    padding: 1rem;
 }
 
 .card-title {
-  display: flex;
-  font-size: 20px;
-  font-weight: bold;
-  justify-content: space-between;
-  padding-bottom: 1.5rem;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
 }
 
 .card-content p {
-  color: #495e57;
+    color: #495e57;
 }
 
 .card-content h4 {
-  padding-top: 1rem;
-  font-weight: bold;
-} 
-
-/*
-  Reservation
-*/
-
-h4 {
-  font-weight: normal;
+    padding-top: 1rem;
+    font-weight: 700;
 }
 
-.reservation {
-  grid-column: 3 / 11;
-  grid-row: 2;
-  border: 1px solid red;
-}
-
-.reservation-grid{
-  display: grid;
-  grid-template-columns: 1fr 0.6fr;
-  border: 2px solid green;
+.reservation-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    border: 2px solid green;
 }
 
 .reservation-left {
-  padding: 2.5rem 0 2.5rem 0;
-  min-width: 300px;
+    padding: 2.5rem 0;
+    min-width: 300px;
 }
 
 .reservation-card {
-  background-color: #EDEFEE;
-  padding: 20px;
-  margin-top: 20px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-input, label {
-  display: block;
+input,
+label {
+    display: block;
 }
 
 label {
-  padding-bottom: 5px;
-  padding-top: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .reservation span {
-  font-size: small;
+    font-size: small;
 }
 
 #radio-button {
-  margin: 5px;
+    margin: 5px;
 }
 
 .reservation-terms {
-  display: inline-flex;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+    display: inline-flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.reservation button {
-  width: 100%;
+.reservation button,
+.reservation img {
+    width: 100%;
 }
 
 .reservation-right {
-  padding: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.reservation img {
-  width: 100%;
-}
-
-/*
-  Testimonials
-*/
 
 .testimonials-bg {
-  background-color: #F4CE14;
+    background-color: #f4ce14;
 }
 
-
 .testimonials h2 {
-  text-align: center;
-  padding: 4rem;
+    text-align: center;
+    padding: 4rem;
 }
 
 .testimonials {
-  grid-column: 3 / 11;
-  grid-row: 2;
-  border: 1px solid red;
-  padding-bottom: 7rem;
+    border: 1px solid red;
+    padding-bottom: 7rem;
 }
 
-.testimonials-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 2px solid green;
-  grid-gap: 10px;
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 2px solid green;
+    grid-gap: 10px;
 }
 
 .testimonials-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #EDEFEE;
-  height: 150px;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #edefee;
+    height: 150px;
+    padding: 10px;
 }
 
-.testimonials-card > div:nth-child(2) {
-  flex: 1;
-  display: flex;
-  align-items: center;
+.testimonials-card>div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
-.testimonials-name{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.testimonials-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .testimonials img {
-  width: 30px;
-  margin-right: 0.5rem;
-  border-radius: 50%;
+    width: 30px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
 
+    header {
+        grid-column: 1 / span 12;
+        padding-left: 2.5rem;
+        background-color: #fff;
+    }
 
-@media screen and (max-width: 768px){
-  .container {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-  }
-  header {
-    grid-column: 1 / span 12;
-    padding-left: 2.5rem;
-    background-color: white;
-  }
-  nav {
-    display: none;
-  }
-  main {
-    grid-column: 1 / 13;
-    padding: 32px;
-  }
-  .main-content {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .main-right-content {
-    display: none;
-  }
-  .chicago {
-    grid-column: 1 / 13;
-    padding: 32px;
-  }
-  .chicago-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .chicago-right {
-    display: none;
-  }
-  footer {
-    grid-column: 1 / 13;
-    padding: 32px;
-  }
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr; 
-  }
-  .reservation {
-    grid-column: 1 / 13;
-    padding: 32px;
-  }
-  .reservation-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .reservation-right {
-    display: none;
-  }
-  .testimonials {
-    grid-column: 1 / 13;
-    padding: 32px;
-  }
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .specials {
-    grid-column: 1 / 13;
-    padding: 32px;
-  }
-  .specials-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+    .chicago-right,
+    .main-right-content,
+    .reservation-right,
+    nav {
+        display: none;
+    }
+
+    .chicago,
+    .reservation,
+    .specials,
+    .testimonials,
+    footer,
+    main {
+        grid-column: 1/13;
+        padding: 32px;
+    }
+
+    .chicago-grid,
+    .footer-grid,
+    .main-content,
+    .reservation-grid,
+    .specials-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
-
 
 @media only screen and (max-width: 375px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  header {
-    background-color: green;
-    padding-left: 16px;
-  }
-  nav {
-    display: none;
-  }
-  main {
-    grid-column: 1 / 13;
-    padding: 16px;
-  }
-  .main-content {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .chicago {
-    grid-column: 1 / 13;
-    padding: 16px;
-  }
-  .chicago-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .chicago-right {
-    display: none;
-  }
-  footer {
-    grid-column: 1 / 13;
-    padding: 16px;
-  }
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr; 
-  }
-  .reservation {
-    grid-column: 1 / 13;
-    padding: 16px;
-  }
-  .reservation-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .reservation-right {
-    display: none;
-  }
-  .testimonials {
-    grid-column: 1 / 13;
-    padding: 16px;
-  }
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .specials {
-    grid-column: 1 / 13;
-    padding: 16px;
-  }
-  .specials-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    header {
+        background-color: green;
+        padding-left: 16px;
+    }
+
+    .chicago-right,
+    .reservation-right,
+    nav {
+        display: none;
+    }
+
+    .chicago,
+    .reservation,
+    .specials,
+    .testimonials,
+    footer,
+    main {
+        grid-column: 1/13;
+        padding: 16px;
+    }
+
+    .chicago-grid,
+    .footer-grid,
+    .main-content,
+    .reservation-grid,
+    .specials-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-input {
-  width: 100%;
-  border-radius: 10px;
-  height: 2rem;
-  border: none;
-  background-color: #D9D9D9;
-  padding-left: 10px;
-}
-
+input,
 select {
-  width: 100%;
-  border-radius: 10px;
-  height: 2rem;
-  border: none;
-  background-color: #D9D9D9;
-  padding-left: 10px;
+    width: 100%;
+    border-radius: 10px;
+    height: 2rem;
+    border: none;
+    background-color: #d9d9d9;
+    padding-left: 10px;
 }
 
 .booking-form {
-  display: grid;
-  gap: 5px
+    display: grid;
+    gap: 5px;
 }
