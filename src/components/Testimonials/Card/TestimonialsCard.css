@@ -1,0 +1,19 @@
+.testimonials-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #edefee;
+  height: 150px;
+  padding: 10px;
+}
+
+.testimonials-card > div:nth-child(2) {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.testimonials-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

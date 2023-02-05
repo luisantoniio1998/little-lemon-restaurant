@@ -1,0 +1,55 @@
+.specials h1 {
+  color: black;
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+.specials-bg {
+  background-color: white;
+}
+
+.specials {
+  grid-column: 3 / 11;
+  grid-row: 2;
+  padding-bottom: 3rem;
+}
+
+.specials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .specials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .specials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .specials {
+    grid-column: 1 / 13;
+    padding: 32px;
+  }
+  .specials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .specials {
+    grid-column: 1 / 13;
+    padding: 16px;
+  }
+  .specials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

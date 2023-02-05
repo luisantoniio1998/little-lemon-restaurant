@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import "./Header.css";
 
 function Header() {
   const scrollTo = (section) => {
@@ -14,7 +15,7 @@ function Header() {
         className="header-img"
         onClick={() => scrollTo("#callToAction")}
       >
-        <img src={logo} />
+        <img src={logo} alt="Little Lemon logo" />
       </Link>
     </header>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { submitAPI } from "../../API";
+import { submitAPI } from "../../../API";
+import "./BookingForm.css";
 
 function BookingForm({ dispatch, state }) {
   const [reservationDate, setReservationDate] = useState("");
@@ -21,7 +22,7 @@ function BookingForm({ dispatch, state }) {
     console.log(reservation);
     const submitResponse = submitAPI(reservation);
     if (submitResponse === true) {
-      navigate("/booking/confirmed");
+      navigate("/booking/confirmed", { state: reservation });
     }
   };
 

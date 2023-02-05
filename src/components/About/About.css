@@ -1,0 +1,65 @@
+/*
+    About
+*/
+
+.about {
+  grid-column: 3 / 11;
+  grid-row: 2;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+.about-left {
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+.about-right {
+  display: flex;
+  justify-content: center;
+}
+
+.about-right > img {
+  object-fit: cover;
+  border-radius: 16px;
+  width: 30vw;
+  height: 350px;
+  align-self: center;
+}
+.about p {
+  color: black;
+  font-size: 18px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    grid-column: 1 / 13;
+    padding: 32px;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .about-right {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .about {
+    grid-column: 1 / 13;
+    padding: 16px;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .about-right {
+    display: none;
+  }
+}

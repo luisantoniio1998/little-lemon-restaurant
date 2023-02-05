@@ -1,0 +1,56 @@
+.footer-bg {
+  background-color: #495e57;
+}
+
+footer {
+  grid-column: 3 / 11;
+  grid-row: 2;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer img {
+  width: 70px;
+}
+
+.insta-icon {
+  display: flex;
+  align-items: center;
+}
+
+footer ul a {
+  color: white;
+  text-decoration: none;
+}
+
+footer li {
+  color: white;
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    grid-column: 1 / 13;
+    padding: 32px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  footer {
+    grid-column: 1 / 13;
+    padding: 16px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

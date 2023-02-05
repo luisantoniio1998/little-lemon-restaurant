@@ -1,7 +1,7 @@
-import React, { useEffect, useReducer } from "react";
-import image from "../../assets/restauranfood.jpg";
-import BookingForm from "./BookingForm";
+import React, { useReducer } from "react";
+import BookingForm from "./BookingForm/BookingForm";
 import { fetchAPI } from "../../API";
+import "./Booking.css";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -30,17 +30,17 @@ function Reservation() {
   const [state, dispatch] = useReducer(reducer, initializeTimes());
 
   return (
-    <div id="booking" className="container">
-      <div className="reservation">
-        <div className="reservation-grid">
-          <div className="reservation-left">
+    <div className="container">
+      <div id="booking" className="booking">
+        <div className="booking-grid">
+          <div className="booking-left">
             <h1>Reserve a table</h1>
             <h4>Reserve your table at Little Lemon Today!</h4>
-            <div className="reservation-card">
+            <div className="booking-form">
               <BookingForm dispatch={dispatch} state={state} />
             </div>
           </div>
-          <div className="reservation-right">
+          <div className="booking-right">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in
               purus vitae neque commodo pulvinar. Nunc venenatis quis lorem ac

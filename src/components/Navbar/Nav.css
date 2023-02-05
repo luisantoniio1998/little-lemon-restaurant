@@ -1,0 +1,45 @@
+.nav-bg {
+  background-color: white;
+}
+
+nav {
+  grid-column: 3 / 11;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    grid-column: 1 / 13;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  nav {
+    grid-column: 1 / 13;
+  }
+  nav ul {
+    display: none;
+  }
+}

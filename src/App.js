@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Navbar/Nav";
 import Footer from "./components/Footer/Footer";
-import BookingConfirmation from "./components/BookingConfirmation/BookingConfirmation";
+import BookingConfirmation from "./components/Booking/BookingConfirmation/BookingConfirmation";
 import Homepage from "./pages/Homepage";
 import Booking from "./pages/BookingPage";
 

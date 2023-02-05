@@ -1,12 +1,13 @@
 import React from "react";
-import image from "../../assets/map.png";
+import image from "../../assets/restaurant.jpg";
+import "./About.css";
 
 function About() {
   return (
-    <div id="about" className="container">
-      <div className="chicago">
-        <div className="chicago-grid">
-          <div className="chicago-left">
+    <div className="container">
+      <div id="about" className="about">
+        <div className="about-grid">
+          <div className="about-left">
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
             <p>
@@ -17,8 +18,8 @@ function About() {
               tellus mi, vitae rutrum felis scelerisque at.{" "}
             </p>
           </div>
-          <div className="chicago-right">
-            <img id="image1" src={image} />
+          <div className="about-right">
+            <img src={image} alt="Little Lemon Restaurant" />
           </div>
         </div>
       </div>

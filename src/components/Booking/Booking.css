@@ -1,0 +1,73 @@
+.booking {
+  grid-column: 3 / 11;
+  grid-row: 2;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+}
+
+.booking-left {
+  padding: 2.5rem 0 2.5rem 0;
+  min-width: 300px;
+}
+
+.booking-form {
+  background-color: #edefee;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.booking span {
+  font-size: small;
+}
+
+.booking-terms {
+  display: inline-flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.booking button {
+  width: 100%;
+}
+
+.booking-right {
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .booking {
+    grid-column: 1 / 13;
+    padding: 32px;
+  }
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .booking-right {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .booking {
+    grid-column: 1 / 13;
+    padding: 16px;
+  }
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .booking-right {
+    display: none;
+  }
+}

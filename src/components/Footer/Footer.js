@@ -1,57 +1,94 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo-square.png";
+import "./Footer.css";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCamera } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
+  const scrollTo = (section) => {
+    const aboutElement = document.querySelector(section);
+    aboutElement.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="footer-bg">
       <div className="container">
         <footer>
           <div className="footer-grid">
-            <div className="footer-col">
+            <div>
               <img src={logo} />
             </div>
-            <div className="footer-col">
+            <div>
               <ul>
                 <li>
-                  <a href="#home">Home</a>
+                  <Link
+                    to="/"
+                    onClick={() => {
+                      scrollTo("#callToAction");
+                    }}
+                  >
+                    <p>Home</p>
+                  </Link>
+                </li>
+                <li
+                  onClick={() => {
+                    scrollTo("#booking");
+                  }}
+                >
+                  <Link to="/booking">
+                    <p>Booking</p>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#home">About</a>
+                  <Link
+                    to="/"
+                    onClick={() => {
+                      scrollTo("#testimonials");
+                    }}
+                  >
+                    <p>Testimonials</p>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#home">Menu</a>
-                </li>
-                <li>
-                  <a href="#home">Reservations</a>
-                </li>
-                <li>
-                  <a href="#home">Order Online</a>
-                </li>
-                <li>
-                  <a href="#home">Login</a>
+                  <Link
+                    to="/"
+                    onClick={() => {
+                      scrollTo("#about");
+                    }}
+                  >
+                    <p>About</p>
+                  </Link>
                 </li>
               </ul>
             </div>
-            <div className="footer-col">
+            <div>
               <ul>
                 <li>
-                  <a href="#home">Home</a>
+                  <p>Chicago, IL 60000-0000</p>
                 </li>
+                <li></li>
                 <li>
-                  <a href="#home">About</a>
-                </li>
-                <li>
-                  <a href="#home">Menu</a>
+                  <p>+351 222 222 222</p>
                 </li>
               </ul>
             </div>
-            <div className="footer-col">
+            <div>
               <ul>
-                <li>Adress</li>
                 <li>
-                  <a href="#home">Instagram</a>
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    className="insta-icon"
+                  >
+                    <FontAwesomeIcon
+                      icon={faCamera}
+                      size={"sm"}
+                      color={"#f4ce14"}
+                    />{" "}
+                    <p style={{ paddingLeft: "5px" }}> Instagram</p>
+                  </a>
                 </li>
-                <li>+351 222 222 222</li>
               </ul>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import image from "../../assets/restauranfood.jpg";
+import "./Hero.css";
 
 function CallToAction() {
   const navigate = useNavigate();
@@ -18,11 +19,12 @@ function CallToAction() {
   }, []);
 
   return (
-    <div id="callToAction" className="main-bg">
+    // main-bg is the full-width background of the section for color
+    <div className="hero-bg">
       <div className="container">
         <main>
-          <div className="main-content">
-            <div className="main-left-content">
+          <div id="callToAction" className="hero-content">
+            <div className="hero-left">
               <h1>Little Lemon</h1>
               <h2>Chicago</h2>
               <p>
@@ -34,7 +36,7 @@ function CallToAction() {
                 Reserve a table
               </button>
             </div>
-            <div className="main-right-content">
+            <div className="hero-right">
               <img src={image} />
             </div>
           </div>

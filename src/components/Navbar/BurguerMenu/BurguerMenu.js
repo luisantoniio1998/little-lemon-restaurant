@@ -3,7 +3,9 @@ import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faL, faLemon } from "@fortawesome/free-solid-svg-icons";
+import { faLemon } from "@fortawesome/free-solid-svg-icons";
+
+import "./BurguerMenu.css";
 
 function BurguerMenu() {
   function showSettings(event) {

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
-import BurguerMenu from "./BurguerMenu";
+import BurguerMenu from "./BurguerMenu/BurguerMenu";
+import "./Nav.css";
 
 function Nav() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
