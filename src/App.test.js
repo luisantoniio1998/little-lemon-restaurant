@@ -1,5 +1,4 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import App from "./App";
 import BookingForm from "./components/BookingForm";
 import { initializeTimes, updateTimes, state } from "./components/Reservation";
 import { fetchAPI } from "./API";

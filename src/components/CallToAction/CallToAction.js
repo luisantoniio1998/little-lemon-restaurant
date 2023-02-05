@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import image from "../assets/restauranfood.jpg";
+import image from "../../assets/restauranfood.jpg";
 
 function CallToAction() {
   const navigate = useNavigate();
@@ -9,8 +9,16 @@ function CallToAction() {
     e.preventDefault();
     navigate("/booking");
   };
+
+  useEffect(() => {
+    const bookingSection = document.getElementById("booking");
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   return (
-    <div className="main-bg">
+    <div id="callToAction" className="main-bg">
       <div className="container">
         <main>
           <div className="main-content">

@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
-import image from "../assets/restauranfood.jpg";
+import image from "../../assets/restauranfood.jpg";
 import BookingForm from "./BookingForm";
-import { fetchAPI } from "../API";
+import { fetchAPI } from "../../API";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -30,7 +30,7 @@ function Reservation() {
   const [state, dispatch] = useReducer(reducer, initializeTimes());
 
   return (
-    <div className="container">
+    <div id="booking" className="container">
       <div className="reservation">
         <div className="reservation-grid">
           <div className="reservation-left">

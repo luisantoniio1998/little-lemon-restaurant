@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { submitAPI } from "../API";
+import { submitAPI } from "../../API";
 
 function BookingForm({ dispatch, state }) {
   const [reservationDate, setReservationDate] = useState("");
@@ -93,6 +93,12 @@ function BookingForm({ dispatch, state }) {
       </select>
       <input
         type="submit"
+        className="submit-button"
+        style={
+          !reservationDate
+            ? { backgroundColor: "#d9d9d9" }
+            : { backgroundColor: "#f4ce14" }
+        }
         value="Make Your reservation"
         disabled={!reservationDate}
         aria-label="Submit your reservation"

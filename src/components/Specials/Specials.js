@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/lemon.jpg";
+import image from "../../assets/lemon.jpg";
 
 function Chicago() {
   return (

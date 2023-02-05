@@ -1,7 +1,7 @@
 import React from "react";
-import image from "../assets/map.png";
+import image from "../../assets/map.png";
 
-function Chicago() {
+function About() {
   return (
     <div id="about" className="container">
       <div className="chicago">
@@ -26,4 +26,4 @@ function Chicago() {
   );
 }
 
-export default Chicago;
+export default About;
