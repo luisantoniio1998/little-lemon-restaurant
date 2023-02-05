@@ -4,6 +4,8 @@ The Little-Lemon-Restaurant project is a capstone project developed as part of M
 
 ![Little-Lemon-Restaurant in action](/docs/example.gif)
 
+#### Note: wireframe on /docs
+
 ## Installation
 
 To install the necessary packages, run the following command in your terminal:
