@@ -1,6 +1,10 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import BookingForm from "./components/BookingForm";
-import { initializeTimes, updateTimes, state } from "./components/Reservation";
+import BookingForm from "./components/Booking/BookingForm/BookingForm";
+import {
+  initializeTimes,
+  updateTimes,
+  state,
+} from "./components/Booking/Booking";
 import { fetchAPI } from "./API";
 
 const mockedUsedNavigate = jest.fn();

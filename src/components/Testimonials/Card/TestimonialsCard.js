@@ -16,7 +16,7 @@ function TestimonialsCard({ name, stars, comment, photo }) {
         <p>{comment}</p>
       </div>
       <div className="testimonials-name">
-        <img src={photo} alt="Testimonial person photo" />
+        <img src={photo} alt="Testimonial person" />
         <p>{name}</p>
       </div>
     </div>

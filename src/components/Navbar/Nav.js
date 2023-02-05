@@ -42,7 +42,7 @@ function Nav() {
       }}
     >
       <BurguerMenu />
-      <div class="container">
+      <div className="container">
         <nav>
           <Header />
           <ul>
