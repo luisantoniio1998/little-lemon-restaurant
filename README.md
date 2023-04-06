@@ -1,6 +1,6 @@
 # Little-Lemon-Restaurant
 
-The Little-Lemon-Restaurant project is a capstone project developed as part of Meta Front-End Developer course. Responsive, with validation without using formik or chakra ui.
+The [Little-Lemon-Restaurant](https://zemmsoares.xyz/little-lemon-restaurant/) project is a capstone project developed as part of Meta Front-End Developer course. Responsive, with validation without using formik or chakra ui.
 
 ![Little-Lemon-Restaurant in action](/docs/example.gif)
 
