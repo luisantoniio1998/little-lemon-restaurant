@@ -6,26 +6,19 @@ import { faTruck } from "@fortawesome/free-solid-svg-icons";
 
 import "./SpecialCard.css";
 
-function SpecialCard({ item }) {
-  // Use provided item data or fallback to default
-  const defaultItem = {
-    name: "Lemon pie",
-    price: 5.99,
-    description: "Our Lemon Pie is the perfect combination of tangy and sweet. Made with fresh lemons, this pie has a light and creamy filling that is nestled in a flaky, buttery crust."
-  };
-
-  const menuItem = item || defaultItem;
-
+function SpecialCard() {
   return (
     <div className="card">
-      <img src={image} alt={menuItem.name} />
+      <img src={image} alt="Lemon pie" />
       <div className="card-content">
         <div className="card-title">
-          <h4>{menuItem.name}</h4>
-          <p className="price">$ {parseFloat(menuItem.price).toFixed(2)}</p>
+          <h4>Lemon pie</h4>
+          <p className="price">$ 5.99</p>
         </div>
         <p>
-          {menuItem.description}
+          Our Lemon Pie is the perfect combination of tangy and sweet. Made with
+          fresh lemons, this pie has a light and creamy filling that is nestled
+          in a flaky, buttery crust.
         </p>
         <h4 style={{ marginTop: "1em" }}>
           Order a Delivery{" "}
